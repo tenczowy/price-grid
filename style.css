@@ -1,0 +1,159 @@
+:root{
+    --clr-cyan: hsl(179, 62%, 43%);
+    --clr-light-cyan: rgba(74,190,189,255);
+    --clr-bright-yellow: hsl(71, 73%, 54%);
+
+    --clr-light-gray: hsl(204, 43%, 93%);
+    --clr-grayish-blue: hsl(218, 22%, 67%);
+    
+    --fs-neutral: 16px;
+
+    --ff-karla: 'Karla', sans-serif;
+
+    --fw-regular: 400;
+    --fw-bold: 700;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: var(--ff-karla);
+    line-height: 1.5rem;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100svh;
+    
+    background-color: var(--clr-light-gray);
+    justify-content: center;
+}
+
+
+
+.grid-layout{
+    display: grid;
+    
+    margin-inline: 1rem;
+    filter: drop-shadow(0 0 0.5rem var(--clr-light-cyan));
+}
+
+.grid-layout > * {
+    padding: 2.5rem;
+}
+
+@media (min-width: 45rem){
+    .grid-layout{
+        grid-template-columns: 1fr 1fr;
+        width: min(50%, 40rem);
+        margin-inline: auto;
+    }
+
+    .description{
+        grid-column: span 2;
+    }
+
+    .subscription{
+        border-radius: 0 0 0 0.5rem;
+    }
+
+    .why-us{
+        border-radius: 0 0 0.5rem 0;
+    }
+}
+
+
+
+
+
+
+
+.description{
+    background-color: white;
+    
+
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+
+.sign-up-button{
+    display: grid;
+    text-decoration: none;
+    margin-top: 1.2rem;
+    color: white;
+    background-color: var(--clr-bright-yellow);
+    width: 95%;
+    height: 3rem;
+    margin-inline: auto;
+    place-content: center;
+    font-size: 1.1rem;
+    border-radius: 0.5rem;
+}
+
+
+
+
+.subscription{
+    color: white;
+    background-color: var(--clr-cyan);
+}
+
+.subscription > p {
+    line-height: 2rem;
+}
+
+#price{
+    padding-right: 1rem;
+    font-weight: var(--fw-bold);
+    font-size: 2rem;
+}
+
+#per-month{
+    color: var(--clr-light-gray);
+}
+
+
+
+
+
+.why-us{
+    background-color: var(--clr-light-cyan);
+    color: white;
+    font-size: 0.8rem;
+    padding-right: 5.5rem;
+    border-radius: 0 0 0.5rem 0.5rem;
+}
+
+
+
+
+
+h1{
+    padding: 0 0 1.2rem 0;
+    font-weight: var(--fw-bold);
+    color: var(--clr-cyan);
+}
+
+h2{
+    padding: 0 0 1rem 0;
+    font-size: 1.2rem;
+    color: var(--clr-bright-yellow);
+}
+
+h3{
+    padding-bottom: 1.6rem;
+}
+
+.description > p{
+    margin: 0;
+    color: var(--clr-grayish-blue);
+    font-weight: var(--fw-regular);
+}
+
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
